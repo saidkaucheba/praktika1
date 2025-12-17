@@ -1,0 +1,175 @@
+"?????? 1"
+
+"""x = int(input())
+y = int(input())
+x1 = int(input())
+y1 = int(input())
+if ((x <= 8) and (y <= 8) and (x > 0) and (y > 0)) and ((x1 <= 8) and (y1 <= 8) and (x1 > 0) and (y1 > 0)):
+    if ((x + y) - (x1 + y1) == 3) or ((x + y) - (x1 + y1) == -3):
+        print("?????? ????? ?????")
+    else:
+        print("?? ?????? ????? ?????")
+else:
+    print("??????!")"""
+    
+    
+"?????? 2"
+
+"""k = int(input())
+n = int(input())
+summa = 0
+while (k != n):
+    if k % 2 == 0:
+        summa += k
+        k += 1
+    else:
+        k += 1
+if n % 2 == 0:
+    summa += n
+print(summa)"""
+
+"?????? 3"
+
+"""summa = 0
+while True:
+    x = int(input())
+    if (x != 0):
+        summa += x
+    else:
+        break
+print(summa)"""
+
+
+"?????? 4"
+
+"""n = int(input())
+proizvedenie = 1
+for i in range(1, n + 1):
+    proizvedenie *= i
+print(proizvedenie)"""
+
+
+
+
+
+"???????????? ????????????????"
+
+
+
+
+"?????? 1"
+
+"""l = [0, 1]
+n = int(input())
+for i in range(n - 2):
+    new_l = l[0] + l[1]
+    l[0] = l[1]
+    l[1] = new_l
+print(new_l)"""
+
+
+
+
+"?????? 2"
+
+"""n = int(input())
+l = [1, 2, 4]
+if (n > 3):
+    for i in range(n - 3):
+        new_l = l[0] + l[1] + l[2]
+        l[0] = l[1]
+        l[1] = l[2]
+        l[2] = new_l
+    print(l[2])
+elif n == 1:
+    print(1)
+elif n == 2:
+    print(2)
+elif n == 3:
+    print(4)"""
+
+
+"?????? 3"
+
+"3.1."
+
+"""coins = [
+    [0, 1, 1, 1, 1, 1],
+    [0, 0, 0, 0, 0, 1],
+    [0, 40, 70, 0, 0, 1],
+    [100, 0, 0,0, 0, 1]
+    ]
+
+for i in range(len(coins)):
+    for j in range(len(coins[i])):
+        if (i == 0 and j == 0):
+            continue
+        elif (i == 0 and j != 0):
+            coins[i][j] = coins[i][j] + coins[i][j - 1]
+        elif (i != 0 and j == 0):
+            coins[i][j] = coins[i][j] + coins[i - 1][j]
+        else:
+            coins[i][j] = max(coins[i - 1][j], coins[i][j - 1]) + coins[i][j]
+print(coins[i][j])"""
+
+
+"3.2."
+
+"""coins = [
+    [0, 0, 0, 0],
+    [1, 50, 0, 0],
+    [1, 0, 0, 0],
+    [0, 0, 0, 1]
+    ]
+
+for i in range(len(coins)):
+    for j in range(len(coins[i])):
+        if (i == 0 and j == 0):
+            continue
+            
+        elif (i == 0 and j != 0):
+            coins[i][j] = coins[i][j] + coins[i][j - 1]
+        elif (i != 0 and j == 0):
+            coins[i][j] = coins[i][j] + coins[i - 1][j]
+        else:
+            coins[i][j] = max(coins[i - 1][j], coins[i][j - 1]) + coins[i][j]
+print(coins[i][j])"""
+
+
+"3.3."
+
+coins = [
+    [0, 1, 1],
+    [0, 0, 0],
+    [0, 40, 70],
+    ]
+    
+for i in range(len(coins)):
+    for j in range(len(coins[i])):
+        if (i == 0 and j == 0):
+            continue
+        elif (i == 0 and j != 0):
+            coins[i][j] = coins[i][j] + coins[i][j - 1]
+        elif (i != 0 and j == 0):
+            coins[i][j] = coins[i][j] + coins[i - 1][j]
+        else:
+            coins[i][j] = max(coins[i - 1][j], coins[i][j - 1]) + coins[i][j]
+print(coins[i][j])
+
+put = []
+while i > 0 or j > 0:
+    if i == 0:
+        put.append("??????")
+        j -= 1
+    elif j == 0:
+        put.append("????")
+        i -= 1
+    else:
+        if coins[i - 1][j] >= coins[i][j - 1]:
+            put.append("????")
+            i -= 1
+        else:
+            put.append("??????")
+            j -= 1
+new_put = put[::-1]
+print(new_put)
