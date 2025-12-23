@@ -1,0 +1,133 @@
+"""??????? 1"""
+
+"""spisok = []
+
+def ispolnitel(n, proidinie):
+    if n > 12:
+        return
+    spisok2 = proidinie + [n]
+    if n == 12:
+        spisok.append(spisok2)
+        return
+    ispolnitel(n + 1, spisok2)
+    ispolnitel(n + 2, spisok2)
+    ispolnitel(n * 2, spisok2)
+    
+ispolnitel(3, [])    
+kol = 0
+for i in spisok:
+    if 10 in i:
+        kol += 1
+        
+print(kol)"""
+
+
+
+
+"""??????? 2"""
+
+"""spisok = []
+
+def ispolnitel(n, proidinie):
+    if n > 27:
+        return
+    spisok2 = proidinie + [n]
+    if n == 27:
+        spisok.append(spisok2)
+        return
+    ispolnitel(n + 1, spisok2)
+    ispolnitel(2 * n + 1, spisok2)
+    
+ispolnitel(1, [])
+    
+kol = 0
+for i in spisok:
+    if 26 not in i:
+        kol += 1
+        
+print(kol)"""
+
+
+
+
+"""??????? 3"""
+
+"""spisok = []
+
+def ispolnitel(n, proidinie):
+    if n > 18:
+        return
+    spisok2 = proidinie + [n]
+    if n == 18:
+        spisok.append(spisok2)
+        return
+    ispolnitel(n + 1, spisok2)
+    ispolnitel(n + 2, spisok2)
+    
+ispolnitel(2, [])
+    
+kol = 0
+for i in spisok:
+    if (9 in i) and (14 not in i):
+        kol += 1
+        
+print(kol)"""
+
+
+
+
+"""??????? 1"""
+
+"""max_x = 1
+a = 1
+s = ['X', 'X', 'X', 'X', 'X', 'X', 'X', 'Y', 'Y', 'Y', 'X', 'Z', 'Z', 'Z', 'Z', 'Z', 'Z',]
+
+for i in range(len(s) - 1):
+    if s[i] == 'X' and s[i + 1] == 'X':
+        a += 1
+        if a > max_x:
+            max_x = a
+    else:
+        a = 1
+        
+max_x = max(a, max_x)
+print(max_x)
+"""
+
+
+
+
+"""??????? 2"""
+
+"""max_s = 0
+a = 0
+s = ['X', 'X', 'X', 'X', 'X', 'Z', 'Z', 'Y', 'X', 'X', 'Y', 'Y', 'Y', 'X',]
+
+for i in range(3, len(s)):
+    if s[i - 3] == "X" and s[i - 2] == "Z" and s[i - 1] == "Z" and s[i] == "Y":
+        if max_s < a:
+            max_s = a
+        a = 0
+    else:
+        a += 1
+if max_s < a:
+    max_s = a
+
+print(max_s)"""
+
+
+
+
+"""??????? 3"""
+
+a = 0
+kol = 0
+s = ['A', 'B', 'C', 'D', 'E', 'F', 'E', 'A', 'B', 'C', 'A', 'B', 'C', 'D', 'D', 'A', 'B', 'C', 'D', 'E', 'F', 'E', 'A', 'B', 'C', 'D', 'A', 'B', 'C', 'D', 'A', 'B', 'C', 'D', 'A', 'B', 'C', 'D', 'E']
+
+for i in range(len(s) - 1):
+    if s[i] == 'E' and s[i + 1] != 'E':
+        for b in range(len(s)):
+            if s[i] != 'F':
+            a += 1
+            if a >= 12:
+                kol += 1
