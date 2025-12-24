@@ -1,0 +1,104 @@
+"""??????? 1"""
+
+"""for x in '0123456789ABCDE':
+    a = '123' + x + '5'
+    b = '1' + x + '233'
+    y = int(a, 15) + int(b, 15)
+    if y % 14 == 0:
+        otvet = y // 14
+        print(otvet)
+        break
+    
+s = []
+
+a = otvet // 15
+o1 = otvet - a * 15
+s.append(o1)
+b = a // 15
+o2 = a - b * 15
+s.append(o2)
+c = b // 15
+o3 = b - c * 15
+s.append(o3)
+d = c // 15
+o4 = c - d * 15
+s.append(o4)
+
+sp = []
+
+for i in s:
+    if i <= 9:
+        sp.append(i)
+    elif i == 10:
+        sp.append('A')
+    elif i == 11:
+        sp.append('B')
+    elif i == 12:
+        sp.append('C')
+    elif i == 13:
+        sp.append('D')
+    elif i == 14:
+        sp.append('E')
+        
+print(sp[::-1])"""
+
+
+
+
+
+"""??????? 2"""
+
+"""for x in range(16, 10000000):
+    a = int('A', 16) + int('B', 16) + 2 + 6 + 7 + int('D', 16) + 1
+    b = int('F', 16) + 0 + 2 + 4 + int('A', 16) + 8 + 9
+    c = a + b
+    if c % (x - 1) == 0:
+        print(x)
+        break"""
+        
+        
+        
+        
+"""??????? 3"""
+
+"""for x in '0123456789':
+    a = x + 'B09'
+    b = x + '8E8'
+    y = int(a, 17) + int(b, 15)
+    if y % 155 == 0:
+        otvet = y // 155
+        print(otvet)
+        break"""
+        
+        
+        
+        
+"""??????? 4"""
+
+"""for x in '01234567':
+    for y in '01234567':
+        a = y + '04' + x + '5'
+        b = '253' + x + y
+        y = int(a, 11) + int(b, 8)
+        if y % 117 == 0:
+            otvet = y // 117
+            print(otvet)
+            break"""
+            
+            
+            
+            
+"""??????? 5"""
+
+"""x = 7 * (512 ** 1912) + 6 * (64 ** 1954) - 5 * (8 ** 1991) - 4 * (8 ** 1980) - 2022
+s = ''
+kol = 0
+
+while x != 0: 
+    s += str(x % 8)
+    x //= 8
+s = s[::-1]
+for i in s:
+    if i == '7':
+        kol += 1
+print(kol)"""
